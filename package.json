@@ -1,6 +1,7 @@
 {
   "name": "diffy",
   "displayName": "Diffy",
+  "icon": "https://github.com/SkySails/vscode-diffy/raw/main/assets/icon.png",
   "description": "A quick shortcut to publish your working tree to diffy.org",
   "version": "1.0.0",
   "engines": {
