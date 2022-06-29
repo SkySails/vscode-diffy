@@ -1,0 +1,53 @@
+{
+  "name": "diffy",
+  "displayName": "Diffy",
+  "description": "A quick shortcut to publish your working tree to diffy.org",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:diffy.shareDiff"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "diffy.shareDiff",
+        "title": "Share diff",
+        "category": "Diffy",
+        "icon": "$(diff)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/node-fetch": "2.x",
+    "@types/vscode": "^1.68.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vscode/test-electron": "^2.1.3",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
